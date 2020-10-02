@@ -17,4 +17,4 @@ jobs:
         run: echo Hello, world!
 
       - name: Run make command
-        run: make hello
+        run: cd cd-ci-pipeline && make hello
