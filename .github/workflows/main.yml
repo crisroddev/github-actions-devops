@@ -16,16 +16,3 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.5
-    - name: Install Dependencies
-      run: |
-        cd cd-ci-pipeline |
-        make install
-    - name: lint with pylint
-      run: |
-        cd cd-ci-pipeline make lint
-    - name: test with pytest
-      run: |
-        cd cd-ci-pipeline make test
-    - name: Format Code
-      run: |
-        cd cd-ci-pipeline make format
