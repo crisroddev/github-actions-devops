@@ -18,13 +18,13 @@ jobs:
         python-version: 3.5
     - name: Install Dependencies
       run: |
-        make install
+        cd cd-ci-pipeline make install
     - name: lint with pylint
       run: |
-        make lint
+        cd cd-ci-pipeline make lint
     - name: test with pytest
       run: |
-        make test
+        cd cd-ci-pipeline make test
     - name: Format Code
       run: |
-        make format
+        cd cd-ci-pipeline make format
