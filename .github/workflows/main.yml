@@ -20,3 +20,17 @@ jobs:
     - name: Hello
       run: |
         cd cd-ci-pipeline && make hello
+    
+    - name: Install Dependencies
+      run: |
+        cd cd-ci-pipeline && make install
+    
+    - name: lint with pylint
+      run: |
+        cd cd-ci-pipeline && make lint
+    - name: test with pytest
+      run: |
+        cd cd-ci-pipeline && make test
+    - name: Format Code
+      run: |
+        cd cd-ci-pipeline && make format
