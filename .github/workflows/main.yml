@@ -19,5 +19,4 @@ jobs:
     
     - name: Hello
       run: |
-        cd cd-ci-pipeline &&\
-        make hello
+        cd cd-ci-pipeline && make hello
