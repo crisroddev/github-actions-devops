@@ -18,5 +18,6 @@ jobs:
         python-version: 3.8
     
     - name: Hello
-      run: cd cd-ci-pipeline &&\
+      run: |
+        cd cd-ci-pipeline &&\
         make hello
