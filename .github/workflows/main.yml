@@ -18,7 +18,8 @@ jobs:
         python-version: 3.5
     - name: Install Dependencies
       run: |
-        cd cd-ci-pipeline make install
+        cd cd-ci-pipeline |
+        make install
     - name: lint with pylint
       run: |
         cd cd-ci-pipeline make lint
