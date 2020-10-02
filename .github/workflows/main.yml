@@ -11,10 +11,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      - name: Run make command
-        run: cd cd-ci-pipeline && make hello
+    - uses: actions/checkout@v2
+    - name: Set Up Python 3.5
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.5
+    - name: Install Dependencies
+      run: |
+        make install
+    - name: lint with pylint
+      run: |
+        make lint
+    - name: test with pytest
+      run: |
+        make test
+    - name: Format Code
+      run: |
+        make format
