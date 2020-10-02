@@ -31,6 +31,3 @@ jobs:
     - name: test with pytest
       run: |
         cd cd-ci-pipeline && make test
-    - name: Format Code
-      run: |
-        cd cd-ci-pipeline && make format
